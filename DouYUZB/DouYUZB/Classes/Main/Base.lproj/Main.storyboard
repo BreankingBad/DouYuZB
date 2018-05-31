@@ -9,65 +9,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="b7M-7w-SXe">
             <objects>
-                <tabBarController id="P1M-Hy-VVy" sceneMemberID="viewController">
+                <tabBarController id="P1M-Hy-VVy" customClass="MainViewController" customModule="DouYUZB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5ky-6i-2cg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="QO2-mj-EZc" kind="relationship" relationship="viewControllers" id="ShT-vA-WMP"/>
-                        <segue destination="5r1-Vi-h5A" kind="relationship" relationship="viewControllers" id="fhk-f6-0gE"/>
-                        <segue destination="hgf-v1-lYq" kind="relationship" relationship="viewControllers" id="mlp-73-4WV"/>
-                        <segue destination="3g9-be-zac" kind="relationship" relationship="viewControllers" id="R6x-Fx-xpG"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jto-Es-YKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-926" y="-285"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="JR4-FN-I65">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="QO2-mj-EZc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XtJ-fg-bwV"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xaa-fz-1u6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="130" y="-476"/>
-        </scene>
-        <!--Live-->
-        <scene sceneID="qO8-g8-tvL">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Live" id="5r1-Vi-h5A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9ZA-ku-i2U"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kZb-bJ-zXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="130" y="-318"/>
-        </scene>
-        <!--Follow-->
-        <scene sceneID="B7r-Tf-iHd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Follow" id="hgf-v1-lYq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="s2F-9r-H5Q"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nR0-Gz-VD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="118" y="-150"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="AMa-CM-PHz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="3g9-be-zac" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rLp-tF-JOo"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q4V-fy-iPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="126" y="2"/>
         </scene>
     </scenes>
 </document>
