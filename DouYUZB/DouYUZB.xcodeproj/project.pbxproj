@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE29CEDD20C0380E000C4CAF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEDC20C0380E000C4CAF /* Home.storyboard */; };
+		DE29CEDF20C03843000C4CAF /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEDE20C03843000C4CAF /* Live.storyboard */; };
+		DE29CEE120C0385D000C4CAF /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEE020C0385D000C4CAF /* Follow.storyboard */; };
+		DE29CEE320C03877000C4CAF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEE220C03877000C4CAF /* Profile.storyboard */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE29CEDC20C0380E000C4CAF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DE29CEDE20C03843000C4CAF /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
+		DE29CEE020C0385D000C4CAF /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
+		DE29CEE220C03877000C4CAF /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,7 @@
 		DE29CECC20BEF705000C4CAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CEDC20C0380E000C4CAF /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -63,6 +72,7 @@
 		DE29CECE20BEF705000C4CAF /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CEE020C0385D000C4CAF /* Follow.storyboard */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -70,6 +80,7 @@
 		DE29CECF20BEF705000C4CAF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CEE220C03877000C4CAF /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -77,6 +88,7 @@
 		DE29CED020BEF705000C4CAF /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CEDE20C03843000C4CAF /* Live.storyboard */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -180,6 +192,10 @@
 				DEC0483920B1C7870011FDF1 /* LaunchScreen.storyboard in Resources */,
 				DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */,
 				DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */,
+				DE29CEDF20C03843000C4CAF /* Live.storyboard in Resources */,
+				DE29CEDD20C0380E000C4CAF /* Home.storyboard in Resources */,
+				DE29CEE320C03877000C4CAF /* Profile.storyboard in Resources */,
+				DE29CEE120C0385D000C4CAF /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
