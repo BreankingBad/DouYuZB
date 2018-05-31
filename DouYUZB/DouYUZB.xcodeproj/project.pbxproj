@@ -12,6 +12,8 @@
 		DE29CEE120C0385D000C4CAF /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEE020C0385D000C4CAF /* Follow.storyboard */; };
 		DE29CEE320C03877000C4CAF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEE220C03877000C4CAF /* Profile.storyboard */; };
 		DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CEE420C03BBF000C4CAF /* MainViewController.swift */; };
+		DE29CEFD20C05533000C4CAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CEFC20C05533000C4CAF /* HomeViewController.swift */; };
+		DE29CF0020C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CEFF20C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		DE29CEE020C0385D000C4CAF /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		DE29CEE220C03877000C4CAF /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DE29CEE420C03BBF000C4CAF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE29CEFC20C05533000C4CAF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DE29CEFF20C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extentsion.swift"; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +63,9 @@
 		DE29CECC20BEF705000C4CAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DE29CEDC20C0380E000C4CAF /* Home.storyboard */,
+				DE29CEED20C05442000C4CAF /* Controller */,
+				DE29CEEF20C05442000C4CAF /* Model */,
+				DE29CEEE20C05442000C4CAF /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -67,6 +73,7 @@
 		DE29CECD20BEF705000C4CAF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CEFE20C0594B000C4CAF /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -74,7 +81,9 @@
 		DE29CECE20BEF705000C4CAF /* Follow */ = {
 			isa = PBXGroup;
 			children = (
-				DE29CEE020C0385D000C4CAF /* Follow.storyboard */,
+				DE29CEF720C054D2000C4CAF /* Controller */,
+				DE29CEF620C054D2000C4CAF /* Model */,
+				DE29CEF820C054D2000C4CAF /* View */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -82,7 +91,9 @@
 		DE29CECF20BEF705000C4CAF /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				DE29CEE220C03877000C4CAF /* Profile.storyboard */,
+				DE29CEFA20C05501000C4CAF /* Controller */,
+				DE29CEF920C05501000C4CAF /* Model */,
+				DE29CEFB20C05501000C4CAF /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -90,7 +101,9 @@
 		DE29CED020BEF705000C4CAF /* Live */ = {
 			isa = PBXGroup;
 			children = (
-				DE29CEDE20C03843000C4CAF /* Live.storyboard */,
+				DE29CEF220C0545A000C4CAF /* Controller */,
+				DE29CEF120C0545A000C4CAF /* Model */,
+				DE29CEF020C0545A000C4CAF /* View */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -98,10 +111,131 @@
 		DE29CED120BEF705000C4CAF /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CEEB20C053F1000C4CAF /* Model */,
+				DE29CEEA20C053F1000C4CAF /* View */,
+				DE29CEEC20C053F1000C4CAF /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DE29CEEA20C053F1000C4CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE29CEEB20C053F1000C4CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE29CEEC20C053F1000C4CAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				DEC0483220B1C7870011FDF1 /* Main.storyboard */,
 				DE29CEE420C03BBF000C4CAF /* MainViewController.swift */,
 			);
-			path = Main;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE29CEED20C05442000C4CAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CEDC20C0380E000C4CAF /* Home.storyboard */,
+				DE29CEFC20C05533000C4CAF /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE29CEEE20C05442000C4CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE29CEEF20C05442000C4CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE29CEF020C0545A000C4CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE29CEF120C0545A000C4CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE29CEF220C0545A000C4CAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CEDE20C03843000C4CAF /* Live.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE29CEF620C054D2000C4CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE29CEF720C054D2000C4CAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CEE020C0385D000C4CAF /* Follow.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE29CEF820C054D2000C4CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE29CEF920C05501000C4CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE29CEFA20C05501000C4CAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CEE220C03877000C4CAF /* Profile.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE29CEFB20C05501000C4CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE29CEFE20C0594B000C4CAF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CEFF20C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DEC0482220B1C7870011FDF1 = {
@@ -211,6 +345,8 @@
 			files = (
 				DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */,
 				DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */,
+				DE29CF0020C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift in Sources */,
+				DE29CEFD20C05533000C4CAF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
