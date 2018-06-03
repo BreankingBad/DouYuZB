@@ -11,6 +11,8 @@ import UIKit
 
 let ScreenW = UIScreen.main.bounds.width
 
+let ScreenH = UIScreen.main.bounds.height
+
 let StatusBarH = UIApplication.shared.statusBarFrame.height
 
 let NavigationBarH: CGFloat = 44
