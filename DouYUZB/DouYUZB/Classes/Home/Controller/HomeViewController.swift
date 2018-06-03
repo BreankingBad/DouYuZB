@@ -10,6 +10,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private lazy var pageTitleView: PageTitleView = {
+        
+        let titles = ["推荐","游戏","娱乐","趣玩"]
+        
+        let view = PageTitleView(frame: CGRect(x: 0, y: StatusBarH + NavigationBarH, width: ScreenW, height: PageTitleViewH), titles:titles)
+        
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +30,12 @@ extension HomeViewController {
     
     private func setupUI() {
         setupNavigationBar()
+        
+        setupPageTitleView()
+    }
+    
+    private func setupPageTitleView() {
+        self.view.addSubview(pageTitleView)
     }
     
     private func setupNavigationBar() {
