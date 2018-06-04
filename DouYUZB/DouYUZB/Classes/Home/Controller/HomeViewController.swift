@@ -10,11 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    private lazy var pageTitleView: PageTitleView = {
+    private lazy var pageTitleView: PageTitleView = { [weak self] in
         
         let titles = ["推荐","游戏","娱乐","趣玩"]
         
         let view = PageTitleView(frame: CGRect(x: 0, y: StatusBarH + NavigationBarH, width: ScreenW, height: PageTitleViewH), titles:titles)
+        
+        view.pageTitleViewDelegate = self
         
         return view
     }()
@@ -79,5 +81,11 @@ extension HomeViewController {
         let scanItem = UIBarButtonItem(imageName: "btn_scan", imageHighlightName: "btn_scan_clicked", size: size)
         
         self.navigationItem.rightBarButtonItems = [historyItem,searchItem,scanItem]
+    }
+}
+
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleView(pageTitleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
     }
 }

@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol PageTitleViewDelegate: class {
+    func pageTitleView(pageTitleView: PageTitleView,selectedIndex index: Int)
+}
+
 class PageTitleView: UIView {
     
     // 当前下标
     private var currentIndex: Int = 0
+    
+    var pageTitleViewDelegate: PageTitleViewDelegate?
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -124,5 +130,7 @@ extension PageTitleView {
         UIView.animate(withDuration: 0.15) {
             self.indicatorLine.frame.origin.x = CGFloat(self.currentIndex) * self.indicatorLine.frame.width
         }
+        
+        pageTitleViewDelegate?.pageTitleView(pageTitleView: self, selectedIndex: currentIndex)
     }
 }

@@ -77,3 +77,12 @@ extension PageContentView: UICollectionViewDataSource {
         return cell
     }
 }
+
+extension PageContentView {
+    
+    // 设置当前页
+    func setCurrentIndex(currentIndex: Int) {
+        let xOffset = CGFloat(currentIndex) * self.frame.width
+        collectionView.setContentOffset(CGPoint(x: xOffset, y: 0), animated: false)
+    }
+}
