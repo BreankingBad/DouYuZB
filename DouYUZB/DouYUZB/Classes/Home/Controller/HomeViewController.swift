@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
         return view
     }()
     
-    private lazy var pageContentView: PageContentView = {
+    private lazy var pageContentView: PageContentView = { [weak self] in
         
         let contentHeight = ScreenH - StatusBarH - NavigationBarH - PageTitleViewH
         let frame = CGRect(x: 0, y: StatusBarH + NavigationBarH + PageTitleViewH, width: ScreenW,

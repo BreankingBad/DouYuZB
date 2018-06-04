@@ -14,11 +14,11 @@ class PageContentView: UIView {
 
     private var childVCs: [UIViewController]
     
-    private var parentVc: UIViewController
+    private weak var parentVc: UIViewController?
     
-    private lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: UICollectionView = { [weak self] in
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -33,7 +33,7 @@ class PageContentView: UIView {
         return collectionView
     }()
     
-    init(frame: CGRect,childVCs: [UIViewController],parentVc: UIViewController) {
+    init(frame: CGRect,childVCs: [UIViewController],parentVc: UIViewController?) {
         self.childVCs = childVCs
         self.parentVc = parentVc
         
@@ -50,7 +50,7 @@ class PageContentView: UIView {
 extension PageContentView {
     private func setupUI() {
         for item in childVCs {
-            parentVc.addChildViewController(item)
+            parentVc?.addChildViewController(item)
         }
         
         collectionView.frame = bounds
