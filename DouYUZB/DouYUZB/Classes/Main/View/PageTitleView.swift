@@ -10,6 +10,9 @@ import UIKit
 
 class PageTitleView: UIView {
     
+    // 当前下标
+    private var currentIndex: Int = 0
+    
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
@@ -67,6 +70,13 @@ extension PageTitleView {
             label.textColor = UIColor.darkGray
             label.font = UIFont.systemFont(ofSize: 16)
             label.textAlignment = .center
+            // 设置tag
+            label.tag = index
+            
+            // 给label添加点击手势
+            label.isUserInteractionEnabled = true
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.onTap))
+            label.addGestureRecognizer(tapGesture)
             
             let labelX = CGFloat(index) * labelW
             label.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
@@ -93,5 +103,26 @@ extension PageTitleView {
         indicatorLine.frame = CGRect(x: firstLabel.frame.origin.x, y: bounds.height - IndicatorLineW, width: firstLabel.frame.width, height: IndicatorLineW)
         addSubview(indicatorLine)
         
+    }
+}
+
+extension PageTitleView {
+    @objc func onTap(sender: UIGestureRecognizer){
+        
+        print("tap working")
+        
+        let tapLabel = sender.view as! UILabel
+        
+        let lastLabel = titleLabels[currentIndex]
+        
+        tapLabel.textColor = UIColor.orange
+        lastLabel.textColor = UIColor.darkGray
+        
+        currentIndex = tapLabel.tag
+        
+        // 动画过渡设置指示条的位置
+        UIView.animate(withDuration: 0.15) {
+            self.indicatorLine.frame.origin.x = CGFloat(self.currentIndex) * self.indicatorLine.frame.width
+        }
     }
 }
