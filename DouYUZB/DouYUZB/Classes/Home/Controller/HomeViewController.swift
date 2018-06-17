@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
             
         }
         let contentView = PageContentView(frame: frame, childVCs: childVcs, parentVc: self)
+        contentView.pageContentViewDelegate = self
         
         return  contentView
     }()
@@ -87,5 +88,11 @@ extension HomeViewController {
 extension HomeViewController: PageTitleViewDelegate {
     func pageTitleView(pageTitleView: PageTitleView, selectedIndex index: Int) {
         pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+extension HomeViewController: PageContentViewDelegate {
+    func pageContentViewDidScroll(pageContentView: PageContentView, srollOffsetRatio: CGFloat) {
+        pageTitleView.setTitleProgress(offsetRatio: srollOffsetRatio)
     }
 }

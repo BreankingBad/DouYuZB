@@ -10,11 +10,17 @@ import UIKit
 
 private let cellId = "ContentViewCell"
 
+protocol PageContentViewDelegate : class {
+    func pageContentViewDidScroll(pageContentView: PageContentView, srollOffsetRatio: CGFloat)
+}
+
 class PageContentView: UIView {
 
     private var childVCs: [UIViewController]
     
     private weak var parentVc: UIViewController?
+    
+    var pageContentViewDelegate: PageContentViewDelegate?
     
     private lazy var collectionView: UICollectionView = { [weak self] in
         let layout = UICollectionViewFlowLayout()
@@ -28,6 +34,7 @@ class PageContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.bounces = false
+        collectionView.delegate = self
         collectionView.dataSource = self
         
         return collectionView
@@ -84,5 +91,14 @@ extension PageContentView {
     func setCurrentIndex(currentIndex: Int) {
         let xOffset = CGFloat(currentIndex) * self.frame.width
         collectionView.setContentOffset(CGPoint(x: xOffset, y: 0), animated: false)
+    }
+}
+
+extension PageContentView : UICollectionViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 位移偏移比例，取值0～页数之间
+       let offsetRatio = scrollView.contentOffset.x / scrollView.frame.width
+        pageContentViewDelegate?.pageContentViewDidScroll(pageContentView: self, srollOffsetRatio: offsetRatio)
     }
 }

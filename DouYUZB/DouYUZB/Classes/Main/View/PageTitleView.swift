@@ -8,6 +8,10 @@
 
 import UIKit
 
+private let normalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+private let selectedColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+
+
 protocol PageTitleViewDelegate: class {
     func pageTitleView(pageTitleView: PageTitleView,selectedIndex index: Int)
 }
@@ -132,5 +136,42 @@ extension PageTitleView {
         }
         
         pageTitleViewDelegate?.pageTitleView(pageTitleView: self, selectedIndex: currentIndex)
+    }
+}
+
+extension PageTitleView {
+    // 设置标签显示进度
+    func setTitleProgress(offsetRatio: CGFloat) {
+        self.indicatorLine.frame.origin.x = offsetRatio * self.indicatorLine.frame.width
+        
+        // 取值0～1之间，颜色由普通颜色到选中颜色
+        let colorProgress = offsetRatio - floor(offsetRatio)
+        
+        // 较小值的index
+        let smallIndex = Int(floor(offsetRatio))
+        // 较大值的index
+        let bigIndex = Int(ceil(offsetRatio))
+        
+        let smallLabel = titleLabels[smallIndex]
+        let bigLabel = titleLabels[bigIndex]
+        
+        // 设置当前页码
+        currentIndex =  Int(round(offsetRatio))
+        
+        let colorRange = (selectedColor.0 - normalColor.0, selectedColor.1 - normalColor.1,
+                          selectedColor.2 - normalColor.2)
+        
+        // 设置较大标签的文字颜色
+        bigLabel.textColor = UIColor(red:normalColor.0 +  colorProgress * colorRange.0,
+                                     green: normalColor.1 +  colorProgress * colorRange.1,
+                                     blue: normalColor.2 + colorProgress * colorRange.2)
+        
+        // 设置较小标签的文字颜色
+        smallLabel.textColor = UIColor(red:normalColor.0 +  (1 - colorProgress) * colorRange.0,
+                                       green: normalColor.1 +  (1 - colorProgress) * colorRange.1,
+                                       blue: normalColor.2 + (1 - colorProgress) * colorRange.2)
+        
+        
+        
     }
 }
