@@ -123,12 +123,15 @@ extension PageTitleView {
         
         let tapLabel = sender.view as! UILabel
         
-        let lastLabel = titleLabels[currentIndex]
-        
-        tapLabel.textColor = UIColor.orange
-        lastLabel.textColor = UIColor.darkGray
-        
         currentIndex = tapLabel.tag
+        
+        for (index, item) in titleLabels.enumerated() {
+            if index == currentIndex {
+               item.textColor = UIColor.orange
+            } else {
+               item.textColor = UIColor.darkGray
+            }
+        }
         
         // 动画过渡设置指示条的位置
         UIView.animate(withDuration: 0.15) {
