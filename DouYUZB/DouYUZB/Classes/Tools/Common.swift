@@ -19,6 +19,8 @@ let NavigationBarH: CGFloat = 44
 
 let PageTitleViewH: CGFloat = 40
 
+let BottomTabLayoutH: CGFloat = 44
+
 // 普通分割线宽度
 let LineW: CGFloat = 0.5
 

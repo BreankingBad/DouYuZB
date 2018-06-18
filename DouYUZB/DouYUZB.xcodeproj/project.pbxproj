@@ -18,6 +18,7 @@
 		DE29CF0420C3BFCB000C4CAF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0320C3BFCB000C4CAF /* Common.swift */; };
 		DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0520C43433000C4CAF /* PageContentView.swift */; };
 		DE29CF0820C43B2F000C4CAF /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0720C43B2F000C4CAF /* UIColor-Extension.swift */; };
+		DE29CF0A20D77ADB000C4CAF /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0920D77ADB000C4CAF /* RecommendViewController.swift */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		DE29CF0320C3BFCB000C4CAF /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		DE29CF0520C43433000C4CAF /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		DE29CF0720C43B2F000C4CAF /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		DE29CF0920D77ADB000C4CAF /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				DE29CEDC20C0380E000C4CAF /* Home.storyboard */,
 				DE29CEFC20C05533000C4CAF /* HomeViewController.swift */,
+				DE29CF0920D77ADB000C4CAF /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */,
 				DE29CF0820C43B2F000C4CAF /* UIColor-Extension.swift in Sources */,
+				DE29CF0A20D77ADB000C4CAF /* RecommendViewController.swift in Sources */,
 				DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */,
 				DE29CF0220C3BE8A000C4CAF /* PageTitleView.swift in Sources */,
 				DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */,
