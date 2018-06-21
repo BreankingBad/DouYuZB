@@ -14,7 +14,7 @@ private let itemWidth: CGFloat = (ScreenW - itemHorizontalMargin * 3 ) / 2
 
 private let itemHeight: CGFloat = itemWidth * 3 / 4
 
-private let headerHeight: CGFloat = 40
+private let headerHeight: CGFloat = 50
 
 private let normalCellId = "normalCellId"
 
@@ -34,10 +34,12 @@ class RecommendViewController: UIViewController {
         let collectionView = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: flowLayout)
         collectionView.dataSource = self
         
+        collectionView.backgroundColor = UIColor.white
+        
         //设置子视图的宽度随着父视图变化
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: normalCellId)
+        collectionView.register(UINib(nibName: "HomeCollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: normalCellId)
         collectionView.register(UINib(nibName: "HomeCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         
         return collectionView
@@ -78,8 +80,7 @@ extension RecommendViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalCellId, for: indexPath)
-        
-        cell.backgroundColor = UIColor.purple
+
         return cell
     }
 }
