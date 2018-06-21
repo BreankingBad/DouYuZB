@@ -19,6 +19,8 @@
 		DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0520C43433000C4CAF /* PageContentView.swift */; };
 		DE29CF0820C43B2F000C4CAF /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0720C43B2F000C4CAF /* UIColor-Extension.swift */; };
 		DE29CF0A20D77ADB000C4CAF /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0920D77ADB000C4CAF /* RecommendViewController.swift */; };
+		DE29CF0D20DBF18C000C4CAF /* HomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0B20DBF18C000C4CAF /* HomeCollectionHeaderView.swift */; };
+		DE29CF0E20DBF18C000C4CAF /* HomeCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF0C20DBF18C000C4CAF /* HomeCollectionHeaderView.xib */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		DE29CF0520C43433000C4CAF /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		DE29CF0720C43B2F000C4CAF /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		DE29CF0920D77ADB000C4CAF /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		DE29CF0B20DBF18C000C4CAF /* HomeCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionHeaderView.swift; sourceTree = "<group>"; };
+		DE29CF0C20DBF18C000C4CAF /* HomeCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionHeaderView.xib; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				DE29CF0120C3BE8A000C4CAF /* PageTitleView.swift */,
 				DE29CF0520C43433000C4CAF /* PageContentView.swift */,
+				DE29CF0B20DBF18C000C4CAF /* HomeCollectionHeaderView.swift */,
+				DE29CF0C20DBF18C000C4CAF /* HomeCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				DE29CEDF20C03843000C4CAF /* Live.storyboard in Resources */,
 				DE29CEDD20C0380E000C4CAF /* Home.storyboard in Resources */,
 				DE29CEE320C03877000C4CAF /* Profile.storyboard in Resources */,
+				DE29CF0E20DBF18C000C4CAF /* HomeCollectionHeaderView.xib in Resources */,
 				DE29CEE120C0385D000C4CAF /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +371,7 @@
 				DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */,
 				DE29CF0220C3BE8A000C4CAF /* PageTitleView.swift in Sources */,
 				DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */,
+				DE29CF0D20DBF18C000C4CAF /* HomeCollectionHeaderView.swift in Sources */,
 				DE29CF0020C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift in Sources */,
 				DE29CF0420C3BFCB000C4CAF /* Common.swift in Sources */,
 				DE29CEFD20C05533000C4CAF /* HomeViewController.swift in Sources */,

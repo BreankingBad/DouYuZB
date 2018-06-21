@@ -37,10 +37,8 @@ class RecommendViewController: UIViewController {
         //设置子视图的宽度随着父视图变化
         collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         
-        collectionView.backgroundColor = UIColor.red
-        
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: normalCellId)
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(UINib(nibName: "HomeCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         
         return collectionView
     }()
@@ -74,8 +72,6 @@ extension RecommendViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
-        
-        headerView.backgroundColor = UIColor.blue
         
         return headerView
     }
