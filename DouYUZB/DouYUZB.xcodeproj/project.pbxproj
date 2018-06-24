@@ -23,6 +23,8 @@
 		DE29CF0E20DBF18C000C4CAF /* HomeCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF0C20DBF18C000C4CAF /* HomeCollectionHeaderView.xib */; };
 		DE29CF1120DBFEA8000C4CAF /* HomeCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF0F20DBFEA8000C4CAF /* HomeCollectionNormalCell.swift */; };
 		DE29CF1220DBFEA8000C4CAF /* HomeCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF1020DBFEA8000C4CAF /* HomeCollectionNormalCell.xib */; };
+		DE29CF1520DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1320DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift */; };
+		DE29CF1620DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF1420DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		DE29CF0C20DBF18C000C4CAF /* HomeCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionHeaderView.xib; sourceTree = "<group>"; };
 		DE29CF0F20DBFEA8000C4CAF /* HomeCollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionNormalCell.swift; sourceTree = "<group>"; };
 		DE29CF1020DBFEA8000C4CAF /* HomeCollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionNormalCell.xib; sourceTree = "<group>"; };
+		DE29CF1320DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewPrettyCell.swift; sourceTree = "<group>"; };
+		DE29CF1420DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				DE29CF0C20DBF18C000C4CAF /* HomeCollectionHeaderView.xib */,
 				DE29CF0F20DBFEA8000C4CAF /* HomeCollectionNormalCell.swift */,
 				DE29CF1020DBFEA8000C4CAF /* HomeCollectionNormalCell.xib */,
+				DE29CF1320DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift */,
+				DE29CF1420DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			files = (
 				DEC0483920B1C7870011FDF1 /* LaunchScreen.storyboard in Resources */,
 				DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */,
+				DE29CF1620DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib in Resources */,
 				DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */,
 				DE29CEDF20C03843000C4CAF /* Live.storyboard in Resources */,
 				DE29CEDD20C0380E000C4CAF /* Home.storyboard in Resources */,
@@ -373,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */,
+				DE29CF1520DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift in Sources */,
 				DE29CF0820C43B2F000C4CAF /* UIColor-Extension.swift in Sources */,
 				DE29CF0A20D77ADB000C4CAF /* RecommendViewController.swift in Sources */,
 				DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */,
