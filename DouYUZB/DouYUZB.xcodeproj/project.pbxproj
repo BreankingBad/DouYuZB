@@ -26,6 +26,8 @@
 		DE29CF1220DBFEA8000C4CAF /* HomeCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF1020DBFEA8000C4CAF /* HomeCollectionNormalCell.xib */; };
 		DE29CF1520DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1320DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift */; };
 		DE29CF1620DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF1420DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib */; };
+		DE29CF1820E52C90000C4CAF /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1720E52C90000C4CAF /* NetworkUtils.swift */; };
+		DE29CF1B20E539BA000C4CAF /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1A20E539BA000C4CAF /* RecommendViewModel.swift */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		DE29CF1020DBFEA8000C4CAF /* HomeCollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionNormalCell.xib; sourceTree = "<group>"; };
 		DE29CF1320DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewPrettyCell.swift; sourceTree = "<group>"; };
 		DE29CF1420DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewPrettyCell.xib; sourceTree = "<group>"; };
+		DE29CF1720E52C90000C4CAF /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		DE29CF1A20E539BA000C4CAF /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		DE29CECC20BEF705000C4CAF /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CF1920E539A1000C4CAF /* ViewModel */,
 				DE29CEED20C05442000C4CAF /* Controller */,
 				DE29CEEF20C05442000C4CAF /* Model */,
 				DE29CEEE20C05442000C4CAF /* View */,
@@ -119,6 +124,7 @@
 			children = (
 				DE29CEFE20C0594B000C4CAF /* Extension */,
 				DE29CF0320C3BFCB000C4CAF /* Common.swift */,
+				DE29CF1720E52C90000C4CAF /* NetworkUtils.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -293,6 +299,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DE29CF1920E539A1000C4CAF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CF1A20E539BA000C4CAF /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DEC0482220B1C7870011FDF1 = {
 			isa = PBXGroup;
 			children = (
@@ -453,9 +467,11 @@
 				DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */,
 				DE29CF0D20DBF18C000C4CAF /* HomeCollectionHeaderView.swift in Sources */,
 				DE29CF0020C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift in Sources */,
+				DE29CF1820E52C90000C4CAF /* NetworkUtils.swift in Sources */,
 				DE29CF0420C3BFCB000C4CAF /* Common.swift in Sources */,
 				DE29CF1120DBFEA8000C4CAF /* HomeCollectionNormalCell.swift in Sources */,
 				DE29CEFD20C05533000C4CAF /* HomeViewController.swift in Sources */,
+				DE29CF1B20E539BA000C4CAF /* RecommendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

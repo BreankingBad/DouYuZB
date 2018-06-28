@@ -27,6 +27,9 @@ private let headerId = "headerId"
 
 class RecommendViewController: UIViewController {
     
+    // viewModel类
+    private lazy var recommendVM: RecommendViewModel = RecommendViewModel()
+    
     private lazy var collectionView: UICollectionView = { [weak self] in
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 0
@@ -55,6 +58,9 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        
+        // 加载网络数据
+        loadData()
     }
 
 }
@@ -104,5 +110,11 @@ extension RecommendViewController: UICollectionViewDelegateFlowLayout {
         } else {
             return CGSize(width: itemWidth, height: normalItemHeight)
         }
+    }
+}
+
+extension RecommendViewController {
+    func loadData() {
+        recommendVM.loadData()
     }
 }
