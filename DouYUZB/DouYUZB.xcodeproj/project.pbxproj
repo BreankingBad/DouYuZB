@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D53CC7D117118C12A3480CA7 /* Pods_DouYUZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49594B01C63B13BB4154A735 /* Pods_DouYUZB.framework */; };
 		DE29CEDD20C0380E000C4CAF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEDC20C0380E000C4CAF /* Home.storyboard */; };
 		DE29CEDF20C03843000C4CAF /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEDE20C03843000C4CAF /* Live.storyboard */; };
 		DE29CEE120C0385D000C4CAF /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29CEE020C0385D000C4CAF /* Follow.storyboard */; };
@@ -32,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2731EB0FA739CF91BE6429F9 /* Pods-DouYUZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYUZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYUZB/Pods-DouYUZB.release.xcconfig"; sourceTree = "<group>"; };
+		49594B01C63B13BB4154A735 /* Pods_DouYUZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYUZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81B5592A2D366ADE36DD9174 /* Pods-DouYUZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYUZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYUZB/Pods-DouYUZB.debug.xcconfig"; sourceTree = "<group>"; };
 		DE29CEDC20C0380E000C4CAF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		DE29CEDE20C03843000C4CAF /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Live.storyboard; sourceTree = "<group>"; };
 		DE29CEE020C0385D000C4CAF /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
@@ -63,12 +67,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53CC7D117118C12A3480CA7 /* Pods_DouYUZB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4E3DEAAC12620624353003 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49594B01C63B13BB4154A735 /* Pods_DouYUZB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B966FE1D171A2BFBD89E021 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81B5592A2D366ADE36DD9174 /* Pods-DouYUZB.debug.xcconfig */,
+				2731EB0FA739CF91BE6429F9 /* Pods-DouYUZB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE29CECB20BEF705000C4CAF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +298,8 @@
 			children = (
 				DEC0482D20B1C7870011FDF1 /* DouYUZB */,
 				DEC0482C20B1C7870011FDF1 /* Products */,
+				5B966FE1D171A2BFBD89E021 /* Pods */,
+				2F4E3DEAAC12620624353003 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -306,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEC0483D20B1C7870011FDF1 /* Build configuration list for PBXNativeTarget "DouYUZB" */;
 			buildPhases = (
+				2C8252B78BB8060801ED6BE5 /* [CP] Check Pods Manifest.lock */,
 				DEC0482720B1C7870011FDF1 /* Sources */,
 				DEC0482820B1C7870011FDF1 /* Frameworks */,
 				DEC0482920B1C7870011FDF1 /* Resources */,
+				F302C6E6A8876FF8ECDB9055 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,6 +399,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C8252B78BB8060801ED6BE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DouYUZB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F302C6E6A8876FF8ECDB9055 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DouYUZB/Pods-DouYUZB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DouYUZB/Pods-DouYUZB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEC0482720B1C7870011FDF1 /* Sources */ = {
@@ -527,6 +592,7 @@
 		};
 		DEC0483E20B1C7870011FDF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81B5592A2D366ADE36DD9174 /* Pods-DouYUZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -542,6 +608,7 @@
 		};
 		DEC0483F20B1C7870011FDF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2731EB0FA739CF91BE6429F9 /* Pods-DouYUZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
