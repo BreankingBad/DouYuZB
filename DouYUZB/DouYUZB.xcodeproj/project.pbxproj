@@ -28,6 +28,9 @@
 		DE29CF1620DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF1420DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib */; };
 		DE29CF1820E52C90000C4CAF /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1720E52C90000C4CAF /* NetworkUtils.swift */; };
 		DE29CF1B20E539BA000C4CAF /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1A20E539BA000C4CAF /* RecommendViewModel.swift */; };
+		DE29CF1D20E72CF2000C4CAF /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1C20E72CF2000C4CAF /* AnchorModel.swift */; };
+		DE29CF1F20E72F9E000C4CAF /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1E20E72F9E000C4CAF /* AnchorGroup.swift */; };
+		DE29CF2120E7328D000C4CAF /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF2020E7328D000C4CAF /* NSDate-Extension.swift */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		DE29CF1420DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 		DE29CF1720E52C90000C4CAF /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		DE29CF1A20E539BA000C4CAF /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		DE29CF1C20E72CF2000C4CAF /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		DE29CF1E20E72F9E000C4CAF /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		DE29CF2020E7328D000C4CAF /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +193,8 @@
 		DE29CEEB20C053F1000C4CAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CF1C20E72CF2000C4CAF /* AnchorModel.swift */,
+				DE29CF1E20E72F9E000C4CAF /* AnchorGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +303,7 @@
 			children = (
 				DE29CEFF20C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift */,
 				DE29CF0720C43B2F000C4CAF /* UIColor-Extension.swift */,
+				DE29CF2020E7328D000C4CAF /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -459,11 +468,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */,
+				DE29CF1D20E72CF2000C4CAF /* AnchorModel.swift in Sources */,
 				DE29CF1520DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift in Sources */,
 				DE29CF0820C43B2F000C4CAF /* UIColor-Extension.swift in Sources */,
+				DE29CF1F20E72F9E000C4CAF /* AnchorGroup.swift in Sources */,
 				DE29CF0A20D77ADB000C4CAF /* RecommendViewController.swift in Sources */,
 				DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */,
 				DE29CF0220C3BE8A000C4CAF /* PageTitleView.swift in Sources */,
+				DE29CF2120E7328D000C4CAF /* NSDate-Extension.swift in Sources */,
 				DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */,
 				DE29CF0D20DBF18C000C4CAF /* HomeCollectionHeaderView.swift in Sources */,
 				DE29CF0020C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift in Sources */,
