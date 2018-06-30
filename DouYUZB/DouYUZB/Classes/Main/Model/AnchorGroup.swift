@@ -29,6 +29,10 @@ class AnchorGroup: NSObject {
     
     lazy var anchors: [AnchorModel] = [AnchorModel]()
     
+    override init() {
+        super.init()
+    }
+    
     init(dict: [String: NSObject]) {
         super.init()
         
