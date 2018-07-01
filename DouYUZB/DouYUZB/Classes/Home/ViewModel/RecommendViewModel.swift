@@ -19,7 +19,8 @@ class RecommendViewModel {
 extension RecommendViewModel {
     func loadData(finishCallback : @escaping () -> ()) {
         
-        let params: [String : String] = ["limit" : "4","offset" : "0","time" : NSDate.getCurrentTime()]
+        let params: [String : String] = ["limit" : "4","offset" : "0"]
+//                let params: [String : String] = ["limit" : "4","offset" : "0","time" : NSDate.getCurrentTime()]
         
         // 目的是等3个异步任务执行完才去更新数据
         let dispatchGroup = DispatchGroup()
@@ -27,6 +28,8 @@ extension RecommendViewModel {
         
         // 请求热门组数据
         NetworkUtils.request(type: .Get, url: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", params: ["time" : NSDate.getCurrentTime()]) { result in
+            
+            print("\(result) getbigDataRoom donehaha")
             
             guard let result = result as? [String : NSObject] else {
                 return
@@ -51,7 +54,7 @@ extension RecommendViewModel {
         
         // 请求颜值组数据
         NetworkUtils.request(type: .Get, url: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", params: params) { result in
-            print(result)
+            print("\(result) getVerticalRoom donehaha")
             
             guard let result = result as? [String : NSObject] else {
                 return
@@ -77,7 +80,7 @@ extension RecommendViewModel {
         // 请求首页下面几组的数据
         //  http://capi.douyucdn.cn/api/v1/getHotCate?limit=4?&offset=0&time=1474252024
         NetworkUtils.request(type: .Get, url: "http://capi.douyucdn.cn/api/v1/getHotCate", params: params) { result in
-            print(result)
+            print("\(result) getHotCate donehaha")
             
             guard let result = result as? [String : NSObject] else {
                 return
@@ -106,7 +109,7 @@ extension RecommendViewModel {
     
     func loadCycleData(finishCallback : @escaping () -> ()) {
         NetworkUtils.request(type: .Get, url: "http://capi.douyucdn.cn/api/v1/slide/6", params: ["version" : "2.300"]) { result in
-            print(result)
+            print("\(result) loadCycleData donehaha")
             
             guard let result = result as? [String : NSObject] else {
                 return

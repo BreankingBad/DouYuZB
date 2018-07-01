@@ -21,11 +21,14 @@ class NetworkUtils {
         let method = type == .Get ? HTTPMethod.get : HTTPMethod.post
         
         // 发送网络请求
-        Alamofire.request(url, method: method, parameters: params)
+        Alamofire.request(url, method: method, parameters: params, encoding: URLEncoding.default, headers: ["Content-Type" : "application/json"] )
             .responseJSON { response in
                 // 获取结果
                 guard let result = response.result.value else {
-                    print(response.result.error ?? "data error")
+                    print("error url:\(url)")
+                    print(response.result.error
+                        ?? "data error")
+                    
                     return
                 }
                 
