@@ -28,6 +28,9 @@ class AnchorModel: NSObject {
     // 主播名称
     var nickname: String = ""
     
+    // 城市
+    var anchor_city: String = ""
+    
     init(dict: [String: NSObject]) {
         super.init()
         

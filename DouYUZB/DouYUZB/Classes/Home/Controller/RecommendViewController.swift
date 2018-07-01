@@ -93,15 +93,23 @@ extension RecommendViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell: UICollectionViewCell
+        
+        let group = recommendVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
         
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: prettyCellId, for: indexPath)
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: prettyCellId, for: indexPath)
+            as! HomeCollectionViewPrettyCell
+            
+            cell.anchor = anchor
+            
+            return cell
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalCellId, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalCellId, for: indexPath) as! HomeCollectionNormalCell
+            cell.anchor = anchor
+            
+            return cell
         }
-
-        return cell
     }
 }
 

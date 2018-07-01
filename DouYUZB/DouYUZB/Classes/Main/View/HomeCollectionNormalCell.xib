@@ -48,7 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzc-JL-X0u">
-                        <rect key="frame" x="165" y="84" width="60" height="16"/>
+                        <rect key="frame" x="171" y="86" width="54" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="666在线" image="Image_online"/>
                     </button>
@@ -73,11 +73,17 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="230" height="134"/>
+            <connections>
+                <outlet property="nickNameLabel" destination="RGb-pI-K2I" id="iGr-Kw-r72"/>
+                <outlet property="onlineBtn" destination="Wzc-JL-X0u" id="BvQ-fZ-1Av"/>
+                <outlet property="roomImg" destination="l1b-6s-UDV" id="xa0-YT-G6L"/>
+                <outlet property="roomNameLabel" destination="M3Z-7W-yoi" id="8Y1-Sk-JFJ"/>
+            </connections>
             <point key="canvasLocation" x="12" y="76"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Image_online" width="16" height="16"/>
+        <image name="Image_online" width="10" height="10"/>
         <image name="Img_default" width="172" height="103"/>
         <image name="home_live_cate_normal" width="14" height="14"/>
     </resources>
