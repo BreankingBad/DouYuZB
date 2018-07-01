@@ -16,6 +16,8 @@ private let normalItemHeight: CGFloat = itemWidth * 3 / 4
 
 private let prettyItemHeight: CGFloat = itemWidth * 4 / 3
 
+private let cycleViewHeight: CGFloat = ScreenW * 3 / 8
+
 private let headerHeight: CGFloat = 50
 
 private let normalCellId = "normalCellId"
@@ -29,6 +31,13 @@ class RecommendViewController: UIViewController {
     
     // viewModel类
     private lazy var recommendVM: RecommendViewModel = RecommendViewModel()
+    
+    private lazy var cycleView: RecommendCycleView = { [weak self] in
+        let cycleView = RecommendCycleView.newInstance()
+        
+        cycleView.frame = CGRect(x: 0, y: -cycleViewHeight, width: ScreenW, height: cycleViewHeight)
+        return cycleView
+    }()
     
     private lazy var collectionView: UICollectionView = { [weak self] in
         let flowLayout = UICollectionViewFlowLayout()
@@ -68,6 +77,11 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController {
     func setupUI() {
         self.view.addSubview(collectionView)
+        
+        collectionView.addSubview(cycleView)
+        
+        // 设置内边距，使cycleView一开始就能显示出来
+        collectionView.contentInset = UIEdgeInsets(top: cycleViewHeight, left: 0, bottom: 0, right: 0)
     }
 }
 

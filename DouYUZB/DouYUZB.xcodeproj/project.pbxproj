@@ -31,6 +31,8 @@
 		DE29CF1D20E72CF2000C4CAF /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1C20E72CF2000C4CAF /* AnchorModel.swift */; };
 		DE29CF1F20E72F9E000C4CAF /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF1E20E72F9E000C4CAF /* AnchorGroup.swift */; };
 		DE29CF2120E7328D000C4CAF /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF2020E7328D000C4CAF /* NSDate-Extension.swift */; };
+		DE29CF2320E8AFB9000C4CAF /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF2220E8AFB9000C4CAF /* RecommendCycleView.swift */; };
+		DE29CF2520E8B025000C4CAF /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF2420E8B025000C4CAF /* RecommendCycleView.xib */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		DE29CF1C20E72CF2000C4CAF /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		DE29CF1E20E72F9E000C4CAF /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		DE29CF2020E7328D000C4CAF /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		DE29CF2220E8AFB9000C4CAF /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
+		DE29CF2420E8B025000C4CAF /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 		DE29CEEE20C05442000C4CAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CF2220E8AFB9000C4CAF /* RecommendCycleView.swift */,
+				DE29CF2420E8B025000C4CAF /* RecommendCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				DE29CEDF20C03843000C4CAF /* Live.storyboard in Resources */,
 				DE29CEDD20C0380E000C4CAF /* Home.storyboard in Resources */,
 				DE29CEE320C03877000C4CAF /* Profile.storyboard in Resources */,
+				DE29CF2520E8B025000C4CAF /* RecommendCycleView.xib in Resources */,
 				DE29CF0E20DBF18C000C4CAF /* HomeCollectionHeaderView.xib in Resources */,
 				DE29CEE120C0385D000C4CAF /* Follow.storyboard in Resources */,
 				DE29CF1220DBFEA8000C4CAF /* HomeCollectionNormalCell.xib in Resources */,
@@ -477,6 +484,7 @@
 				DE29CF0A20D77ADB000C4CAF /* RecommendViewController.swift in Sources */,
 				DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */,
 				DE29CF0220C3BE8A000C4CAF /* PageTitleView.swift in Sources */,
+				DE29CF2320E8AFB9000C4CAF /* RecommendCycleView.swift in Sources */,
 				DE29CF2120E7328D000C4CAF /* NSDate-Extension.swift in Sources */,
 				DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */,
 				DE29CF0D20DBF18C000C4CAF /* HomeCollectionHeaderView.swift in Sources */,
