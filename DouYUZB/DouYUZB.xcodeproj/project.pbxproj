@@ -33,6 +33,7 @@
 		DE29CF2120E7328D000C4CAF /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF2020E7328D000C4CAF /* NSDate-Extension.swift */; };
 		DE29CF2320E8AFB9000C4CAF /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF2220E8AFB9000C4CAF /* RecommendCycleView.swift */; };
 		DE29CF2520E8B025000C4CAF /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF2420E8B025000C4CAF /* RecommendCycleView.xib */; };
+		DE29CF2720E8C4D5000C4CAF /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF2620E8C4D5000C4CAF /* CycleModel.swift */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		DE29CF2020E7328D000C4CAF /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		DE29CF2220E8AFB9000C4CAF /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		DE29CF2420E8B025000C4CAF /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
+		DE29CF2620E8C4D5000C4CAF /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		DE29CEEF20C05442000C4CAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE29CF2620E8C4D5000C4CAF /* CycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				DE29CF0D20DBF18C000C4CAF /* HomeCollectionHeaderView.swift in Sources */,
 				DE29CF0020C059B0000C4CAF /* UIBarButtonItem-Extentsion.swift in Sources */,
 				DE29CF1820E52C90000C4CAF /* NetworkUtils.swift in Sources */,
+				DE29CF2720E8C4D5000C4CAF /* CycleModel.swift in Sources */,
 				DE29CF0420C3BFCB000C4CAF /* Common.swift in Sources */,
 				DE29CF1120DBFEA8000C4CAF /* HomeCollectionNormalCell.swift in Sources */,
 				DE29CEFD20C05533000C4CAF /* HomeViewController.swift in Sources */,

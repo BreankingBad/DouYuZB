@@ -12,6 +12,8 @@ class RecommendViewModel {
     lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
     lazy var hotGroup: AnchorGroup = AnchorGroup()
     lazy var prettyGroup: AnchorGroup = AnchorGroup()
+    
+    lazy var cycleModels: [CycleModel] = [CycleModel]()
 }
 
 extension RecommendViewModel {
@@ -97,6 +99,27 @@ extension RecommendViewModel {
             // 等3个异步执行完了，组织全部数据
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.hotGroup, at: 0)
+            
+            finishCallback()
+        }
+    }
+    
+    func loadCycleData(finishCallback : @escaping () -> ()) {
+        NetworkUtils.request(type: .Get, url: "http://capi.douyucdn.cn/api/v1/slide/6", params: ["version" : "2.300"]) { result in
+            print(result)
+            
+            guard let result = result as? [String : NSObject] else {
+                return
+            }
+            
+            guard let data = result["data"] as? [[String : NSObject]] else {
+                return
+            }
+            
+            for item in data {
+                let cycle = CycleModel(dict: item)
+                self.cycleModels.append(cycle)
+            }
             
             finishCallback()
         }

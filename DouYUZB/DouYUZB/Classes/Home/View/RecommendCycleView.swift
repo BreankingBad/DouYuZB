@@ -15,6 +15,14 @@ class RecommendCycleView: UIView {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var cycleModels: [CycleModel]? {
+        didSet {
+            collectionView.reloadData()
+            
+            pageControl.numberOfPages = cycleModels?.count ?? 0
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -54,6 +62,6 @@ extension RecommendCycleView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return cycleModels?.count ?? 0
     }
 }
