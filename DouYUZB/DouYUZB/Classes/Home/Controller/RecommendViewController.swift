@@ -18,6 +18,8 @@ private let prettyItemHeight: CGFloat = itemWidth * 4 / 3
 
 private let cycleViewHeight: CGFloat = ScreenW * 3 / 8
 
+private let gameViewHeight: CGFloat = 90
+
 private let headerHeight: CGFloat = 50
 
 private let normalCellId = "normalCellId"
@@ -35,8 +37,14 @@ class RecommendViewController: UIViewController {
     private lazy var cycleView: RecommendCycleView = { [weak self] in
         let cycleView = RecommendCycleView.newInstance()
         
-        cycleView.frame = CGRect(x: 0, y: -cycleViewHeight, width: ScreenW, height: cycleViewHeight)
+        cycleView.frame = CGRect(x: 0, y: -(cycleViewHeight + gameViewHeight), width: ScreenW, height: cycleViewHeight)
         return cycleView
+    }()
+    
+    private lazy var gameView: RecommendGameView = { [weak self] in
+        let gameView = RecommendGameView.newInstance()
+        gameView.frame = CGRect(x: 0, y: -gameViewHeight, width: ScreenW, height: gameViewHeight)
+        return gameView  
     }()
     
     private lazy var collectionView: UICollectionView = { [weak self] in
@@ -80,8 +88,10 @@ extension RecommendViewController {
         
         collectionView.addSubview(cycleView)
         
+        collectionView.addSubview(gameView)
+        
         // 设置内边距，使cycleView一开始就能显示出来
-        collectionView.contentInset = UIEdgeInsets(top: cycleViewHeight, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: cycleViewHeight + gameViewHeight, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -141,6 +151,8 @@ extension RecommendViewController {
     func loadData() {
         recommendVM.loadData {
             self.collectionView.reloadData()
+            
+            self.gameView.anchorGroups = self.recommendVM.anchorGroups
         }
         
         recommendVM.loadCycleData {

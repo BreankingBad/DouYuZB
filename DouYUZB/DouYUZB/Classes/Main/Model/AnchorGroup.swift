@@ -27,6 +27,9 @@ class AnchorGroup: NSObject {
     
     var icon_name: String = "home_header_normal"
     
+    // 房间图标url(游戏布局会用到)
+    var icon_url: String = ""
+    
     lazy var anchors: [AnchorModel] = [AnchorModel]()
     
     override init() {
