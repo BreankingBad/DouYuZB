@@ -152,7 +152,17 @@ extension RecommendViewController {
         recommendVM.loadData {
             self.collectionView.reloadData()
             
-            self.gameView.anchorGroups = self.recommendVM.anchorGroups
+            var models = self.recommendVM.anchorGroups
+            // 移除第一组和第二组（热门和颜值）
+            models.removeFirst()
+            models.removeFirst()
+            let moreBtn = AnchorGroup()
+            moreBtn.tag_name = "更多"
+            // 在数组最后添加更多按钮
+            models.append(moreBtn)
+            
+            // 取前10个元素
+            self.gameView.anchorGroups = models
         }
         
         recommendVM.loadCycleData {

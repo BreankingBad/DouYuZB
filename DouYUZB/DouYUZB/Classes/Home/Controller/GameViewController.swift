@@ -85,6 +85,9 @@ extension GameViewController {
     func loadData() {
         self.viewModel.loadGameData {
             self.collectionView.reloadData()
+            
+            // 取前10个元素
+            self.gameView.anchorGroups = Array(self.viewModel.gameModels[0..<10])
         }
     }
 }

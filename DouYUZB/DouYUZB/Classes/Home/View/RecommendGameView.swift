@@ -14,17 +14,9 @@ class RecommendGameView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var anchorGroups: [AnchorGroup]? {
+    var anchorGroups: [BaseGameModel]? {
         didSet {
-            // 移除第一组和第二组（热门和颜值）
-            anchorGroups?.removeFirst()
-            anchorGroups?.removeFirst()
             
-            let moreBtn = AnchorGroup()
-            moreBtn.tag_name = "更多"
-            
-            // 在数组最后添加更多按钮
-            anchorGroups?.append(moreBtn)
             
             collectionView.reloadData()
         }
