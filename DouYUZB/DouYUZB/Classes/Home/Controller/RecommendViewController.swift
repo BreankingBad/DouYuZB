@@ -10,7 +10,7 @@ import UIKit
 
 private let itemHorizontalMargin: CGFloat = 10
 
-private let itemWidth: CGFloat = (ScreenW - itemHorizontalMargin * 3 ) / 2
+fileprivate let itemWidth: CGFloat = (ScreenW - itemHorizontalMargin * 3 ) / 2
 
 private let normalItemHeight: CGFloat = itemWidth * 3 / 4
 
