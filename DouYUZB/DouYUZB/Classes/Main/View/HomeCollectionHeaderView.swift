@@ -13,6 +13,8 @@ class HomeCollectionHeaderView: UICollectionReusableView {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var moreLabel: UILabel!
+    
     var group : AnchorGroup? {
         didSet {
             titleLabel.text = group?.tag_name
