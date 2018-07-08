@@ -23,3 +23,9 @@ class HomeCollectionHeaderView: UICollectionReusableView {
     }
     
 }
+
+extension HomeCollectionHeaderView {
+    static func newInstance() -> HomeCollectionHeaderView {
+        return Bundle.main.loadNibNamed("HomeCollectionHeaderView", owner: nil, options: nil)?.first as! HomeCollectionHeaderView
+    }
+}

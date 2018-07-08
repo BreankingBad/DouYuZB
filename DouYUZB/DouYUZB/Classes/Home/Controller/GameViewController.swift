@@ -10,8 +10,9 @@ import UIKit
 
 fileprivate let edgeMargin: CGFloat = 10
 fileprivate let itemWidth: CGFloat = (ScreenW - (edgeMargin * 2)) / 3
-fileprivate let itemHight: CGFloat = itemWidth * 6 / 5
-fileprivate let headerHight: CGFloat = 50
+fileprivate let itemHeight: CGFloat = itemWidth * 6 / 5
+fileprivate let headerHeight: CGFloat = 50
+fileprivate let gameViewHeight: CGFloat = 90
 fileprivate let cellId = "gameCellId"
 fileprivate let headerId = "gameHeaderId"
 
@@ -19,13 +20,28 @@ class GameViewController: UIViewController {
     
     fileprivate lazy var viewModel: GameViewModel = GameViewModel()
     
+    fileprivate lazy var topHeaderView: HomeCollectionHeaderView = {
+        let headerView = HomeCollectionHeaderView.newInstance()
+        headerView.frame = CGRect(x: 0, y: -(headerHeight + gameViewHeight), width: ScreenW, height: headerHeight)
+        headerView.moreLabel.isHidden = true
+        headerView.titleLabel.text = "常见"
+        headerView.iconImage.image = UIImage(named: "Img_orange")
+        return headerView
+    }()
+    
+    fileprivate lazy var gameView: RecommendGameView = {
+        let gameView = RecommendGameView.newInstance()
+        gameView.frame = CGRect(x: 0, y: -gameViewHeight, width: ScreenW, height: gameViewHeight)
+        return gameView
+    }()
+    
     fileprivate lazy var collectionView: UICollectionView = { [weak self] in
 
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemHight)
-        flowLayout.headerReferenceSize = CGSize(width: ScreenW, height: headerHight)
+        flowLayout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+        flowLayout.headerReferenceSize = CGSize(width: ScreenW, height: headerHeight)
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: edgeMargin, bottom: 0, right: edgeMargin)
         
         let collectionView = UICollectionView(frame: (self?.view.bounds)!,collectionViewLayout: flowLayout)
@@ -43,6 +59,8 @@ class GameViewController: UIViewController {
        
         collectionView.register(UINib(nibName: "HomeCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         
+        collectionView.contentInset = UIEdgeInsets(top: headerHeight + gameViewHeight, left: 0, bottom: 0, right: 0)
+        
         return collectionView
    
     }()
@@ -59,6 +77,9 @@ class GameViewController: UIViewController {
 extension GameViewController {
     func setupUI() {
         self.view.addSubview(collectionView)
+        
+        collectionView.addSubview(topHeaderView)
+        collectionView.addSubview(gameView)
     }
     
     func loadData() {
