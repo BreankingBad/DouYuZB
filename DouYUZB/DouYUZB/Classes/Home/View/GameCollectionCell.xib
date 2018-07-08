@@ -14,14 +14,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameCollectionCell" customModule="DouYUZB" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="156" height="115"/>
+            <rect key="frame" x="0.0" y="0.0" width="156" height="109"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="156" height="115"/>
+                <rect key="frame" x="0.0" y="0.0" width="156" height="109"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8g-bH-KRg">
-                        <rect key="frame" x="55.5" y="91" width="45" height="14"/>
+                        <rect key="frame" x="55.5" y="77" width="45" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="caK-Cr-qPV"/>
                         </constraints>
@@ -30,8 +30,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-K5-pxd">
-                        <rect key="frame" x="43" y="10" width="71" height="71"/>
+                        <rect key="frame" x="56" y="22" width="45" height="45"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="45" id="Jei-Pf-IDD"/>
+                            <constraint firstAttribute="width" constant="45" id="nHx-Qx-Kte"/>
                             <constraint firstAttribute="width" secondItem="7b1-K5-pxd" secondAttribute="height" multiplier="1:1" id="uh1-cF-0wN"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -41,22 +43,31 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fq6-nA-eG1">
+                        <rect key="frame" x="0.0" y="108" width="156" height="0.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="z5s-EJ-6jn"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="m8g-bH-KRg" secondAttribute="bottom" constant="10" id="Beq-zz-OAy"/>
-                <constraint firstItem="7b1-K5-pxd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="CW0-Hh-MF3"/>
-                <constraint firstItem="7b1-K5-pxd" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ce7-hQ-owg"/>
+                <constraint firstAttribute="bottom" secondItem="fq6-nA-eG1" secondAttribute="bottom" constant="0.5" id="43c-FU-yOX"/>
                 <constraint firstItem="m8g-bH-KRg" firstAttribute="top" secondItem="7b1-K5-pxd" secondAttribute="bottom" constant="10" id="GKA-hX-wxo"/>
-                <constraint firstItem="m8g-bH-KRg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XBT-jf-2IM"/>
+                <constraint firstItem="fq6-nA-eG1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LDK-Ts-bfQ"/>
+                <constraint firstItem="m8g-bH-KRg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ozx-Cg-AEo"/>
+                <constraint firstItem="7b1-K5-pxd" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="U7Y-GO-OHg"/>
+                <constraint firstAttribute="trailing" secondItem="fq6-nA-eG1" secondAttribute="trailing" id="b5a-UT-Zlo"/>
+                <constraint firstItem="7b1-K5-pxd" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-10" id="tyl-gU-Zu5"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="156" height="115"/>
+            <size key="customSize" width="156" height="109"/>
             <connections>
                 <outlet property="icon" destination="7b1-K5-pxd" id="Md0-hX-nFw"/>
                 <outlet property="title" destination="m8g-bH-KRg" id="xFT-kA-z8A"/>
             </connections>
-            <point key="canvasLocation" x="87" y="57.5"/>
+            <point key="canvasLocation" x="87" y="54.5"/>
         </collectionViewCell>
     </objects>
 </document>

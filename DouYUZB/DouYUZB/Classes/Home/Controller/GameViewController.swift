@@ -16,6 +16,8 @@ fileprivate let cellId = "gameCellId"
 
 class GameViewController: UIViewController {
     
+    fileprivate lazy var viewModel: GameViewModel = GameViewModel()
+    
     fileprivate lazy var collectionView: UICollectionView = { [weak self] in
 
         let flowLayout = UICollectionViewFlowLayout()
@@ -25,9 +27,13 @@ class GameViewController: UIViewController {
         
         let collectionView = UICollectionView(frame: (self?.view.bounds)!,collectionViewLayout: flowLayout)
         
+        collectionView.backgroundColor = UIColor.white
+        
         collectionView.contentInset = UIEdgeInsets(top: 0, left: edgeMargin, bottom: 0, right: edgeMargin)
         
         collectionView.dataSource = self
+        
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         collectionView.register(UINib(nibName: "GameCollectionCell", bundle: nil), forCellWithReuseIdentifier: cellId)
         
@@ -45,18 +51,24 @@ class GameViewController: UIViewController {
 extension GameViewController {
     func setupUI() {
         self.view.addSubview(collectionView)
+        
+        self.viewModel.loadGameData {
+            self.collectionView.reloadData()
+        }
     }
 }
 
 extension GameViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 60
+        return self.viewModel.gameModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! GameCollectionCell
         
-        cell.backgroundColor = UIColor.randomColor()
+        let model = self.viewModel.gameModels[indexPath.item]
+        
+        cell.gameModel = model
         
         return cell
     }

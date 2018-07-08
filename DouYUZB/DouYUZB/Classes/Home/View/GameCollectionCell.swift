@@ -14,9 +14,9 @@ class GameCollectionCell: UICollectionViewCell {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var title: UILabel!
     
-    var anchor: AnchorGroup? {
+    var gameModel: BaseGameModel? {
         didSet {
-            guard let anchor = anchor else {
+            guard let anchor = gameModel else {
                 return
             }
             

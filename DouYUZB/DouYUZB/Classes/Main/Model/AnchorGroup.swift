@@ -9,7 +9,7 @@
 import Foundation
 
 // 主播组模型
-class AnchorGroup: NSObject {
+class AnchorGroup: BaseGameModel {
     // 房间列表
     var room_list: [[String: NSObject]]? {
         didSet {
@@ -22,28 +22,13 @@ class AnchorGroup: NSObject {
         }
     }
     
-    // 组名
-    var tag_name: String = ""
+    
     
     var icon_name: String = "home_header_normal"
     
-    // 房间图标url(游戏布局会用到)
-    var icon_url: String = ""
+
     
     lazy var anchors: [AnchorModel] = [AnchorModel]()
     
-    override init() {
-        super.init()
-    }
-    
-    init(dict: [String: NSObject]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    
-    /// 因为有些key没有定义，所以为了避免报错，重新该方法
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        
-    }
+   
 }
