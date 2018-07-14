@@ -102,6 +102,8 @@ extension GameViewController: UICollectionViewDataSource {
         
         let model = self.viewModel.gameModels[indexPath.item]
         
+        cell.clipsToBounds = false
+        
         cell.gameModel = model
         
         return cell

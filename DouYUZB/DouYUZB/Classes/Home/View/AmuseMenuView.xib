@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AmuseMenuView" customModule="DouYUZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="237"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oSI-YY-QP7">
+                    <rect key="frame" x="179.5" y="203" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.83474392360000005" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JzI-Nz-Ky4">
+                    <rect key="frame" x="0.0" y="0.0" width="398" height="209"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hRU-s4-Jy7">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JzI-Nz-Ky4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1Th-ap-Ywx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JzI-Nz-Ky4" secondAttribute="trailing" id="4qF-as-Pmh"/>
+                <constraint firstItem="JzI-Nz-Ky4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KEH-OI-1ho"/>
+                <constraint firstItem="oSI-YY-QP7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PsG-q5-Mwu"/>
+                <constraint firstItem="oSI-YY-QP7" firstAttribute="top" secondItem="JzI-Nz-Ky4" secondAttribute="bottom" constant="-6" id="RVW-20-aKm"/>
+                <constraint firstItem="oSI-YY-QP7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="3" id="YUB-7y-unB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="JzI-Nz-Ky4" id="dJO-dz-ar0"/>
+                <outlet property="pageControl" destination="oSI-YY-QP7" id="LrN-O9-1c4"/>
+            </connections>
+            <point key="canvasLocation" x="45" y="-125.5"/>
+        </view>
+    </objects>
+</document>

@@ -16,6 +16,8 @@ private let normalItemHeight: CGFloat = itemWidth * 3 / 4
 
 private let headerHeight: CGFloat = 50
 
+private let menuViewHeight: CGFloat = 200
+
 private let normalCellId = "normalCellId"
 
 private let headerId = "headerId"
@@ -25,6 +27,12 @@ class AmuseViewController: UIViewController {
     
     // viewModel类
     private lazy var amuseViewModel: AmuseViewModel = AmuseViewModel()
+    
+    private lazy var menuView: AmuseMenuView = {
+        let menuView = AmuseMenuView.newInstance()
+        menuView.frame = CGRect(x: 0, y: -menuViewHeight, width: ScreenW, height: menuViewHeight)
+        return menuView
+    }()
     
     private lazy var collectionView: UICollectionView = { [weak self] in
         let flowLayout = UICollectionViewFlowLayout()
@@ -62,6 +70,11 @@ class AmuseViewController: UIViewController {
 extension AmuseViewController {
     func setupUI() {
         self.view.addSubview(collectionView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: menuViewHeight, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(menuView)
+        
+        
     }
 }
 
@@ -103,6 +116,10 @@ extension AmuseViewController {
     func loadData() {
         amuseViewModel.loadData {
             self.collectionView.reloadData()
+            
+            var groups = self.amuseViewModel.anchorGroups
+//            groups.removeFirst()
+            self.menuView.anchorGroups = groups
         }
     }
 }
