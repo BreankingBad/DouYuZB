@@ -15,9 +15,11 @@ class RoomNormalViewController: BaseViewController,UIGestureRecognizerDelegate  
 
         view.backgroundColor = UIColor.randomColor()
         
+        
+        
         // setNavigationBarHidden隐藏时，手势左滑返回没有了，此时要设置interactivePopGestureRecognizer才起作用
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        //        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        //        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +35,5 @@ class RoomNormalViewController: BaseViewController,UIGestureRecognizerDelegate  
         
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
-
 }
+
