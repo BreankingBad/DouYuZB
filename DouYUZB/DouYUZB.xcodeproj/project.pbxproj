@@ -51,6 +51,9 @@
 		DE29CF4820F9EF6C000C4CAF /* AmuseMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF4620F9EF6C000C4CAF /* AmuseMenuCell.swift */; };
 		DE29CF4920F9EF6C000C4CAF /* AmuseMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF4720F9EF6C000C4CAF /* AmuseMenuCell.xib */; };
 		DE29CF4B20FB345A000C4CAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF4A20FB345A000C4CAF /* BaseViewController.swift */; };
+		DE29CF5120FB86A2000C4CAF /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF5020FB86A2000C4CAF /* RoomNormalViewController.swift */; };
+		DE29CF5320FB86CA000C4CAF /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF5220FB86CA000C4CAF /* RoomShowViewController.swift */; };
+		DE29CF5520FB875E000C4CAF /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF5420FB875E000C4CAF /* BaseNavigationViewController.swift */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -104,6 +107,9 @@
 		DE29CF4620F9EF6C000C4CAF /* AmuseMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuCell.swift; sourceTree = "<group>"; };
 		DE29CF4720F9EF6C000C4CAF /* AmuseMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuCell.xib; sourceTree = "<group>"; };
 		DE29CF4A20FB345A000C4CAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DE29CF5020FB86A2000C4CAF /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		DE29CF5220FB86CA000C4CAF /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		DE29CF5420FB875E000C4CAF /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 			children = (
 				DE29CED120BEF705000C4CAF /* Main */,
 				DE29CECC20BEF705000C4CAF /* Home */,
+				DE29CF4C20FB866D000C4CAF /* Room */,
 				DE29CED020BEF705000C4CAF /* Live */,
 				DE29CECE20BEF705000C4CAF /* Follow */,
 				DE29CECF20BEF705000C4CAF /* Profile */,
@@ -246,6 +253,7 @@
 				DEC0483220B1C7870011FDF1 /* Main.storyboard */,
 				DE29CEE420C03BBF000C4CAF /* MainViewController.swift */,
 				DE29CF4A20FB345A000C4CAF /* BaseViewController.swift */,
+				DE29CF5420FB875E000C4CAF /* BaseNavigationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -374,6 +382,39 @@
 				DE29CF4020F3BAAE000C4CAF /* AmuseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DE29CF4C20FB866D000C4CAF /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CF4D20FB866D000C4CAF /* Controller */,
+				DE29CF4E20FB866D000C4CAF /* Model */,
+				DE29CF4F20FB866D000C4CAF /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		DE29CF4D20FB866D000C4CAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE29CF5020FB86A2000C4CAF /* RoomNormalViewController.swift */,
+				DE29CF5220FB86CA000C4CAF /* RoomShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE29CF4E20FB866D000C4CAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE29CF4F20FB866D000C4CAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DEC0482220B1C7870011FDF1 = {
@@ -546,12 +587,14 @@
 				DE29CF0820C43B2F000C4CAF /* UIColor-Extension.swift in Sources */,
 				DE29CF1F20E72F9E000C4CAF /* AnchorGroup.swift in Sources */,
 				DE29CF0A20D77ADB000C4CAF /* RecommendViewController.swift in Sources */,
+				DE29CF5520FB875E000C4CAF /* BaseNavigationViewController.swift in Sources */,
 				DE29CEE520C03BBF000C4CAF /* MainViewController.swift in Sources */,
 				DE29CF0220C3BE8A000C4CAF /* PageTitleView.swift in Sources */,
 				DE29CF2320E8AFB9000C4CAF /* RecommendCycleView.swift in Sources */,
 				DE29CF3D20F20BA5000C4CAF /* BaseGameModel.swift in Sources */,
 				DE29CF2120E7328D000C4CAF /* NSDate-Extension.swift in Sources */,
 				DE29CF0620C43433000C4CAF /* PageContentView.swift in Sources */,
+				DE29CF5320FB86CA000C4CAF /* RoomShowViewController.swift in Sources */,
 				DE29CF0D20DBF18C000C4CAF /* HomeCollectionHeaderView.swift in Sources */,
 				DE29CF3920F20B45000C4CAF /* GameViewModel.swift in Sources */,
 				DE29CF3F20F3BA56000C4CAF /* AmuseViewController.swift in Sources */,
@@ -565,6 +608,7 @@
 				DE29CF1120DBFEA8000C4CAF /* HomeCollectionNormalCell.swift in Sources */,
 				DE29CF3220EA70F1000C4CAF /* GameCollectionCell.swift in Sources */,
 				DE29CEFD20C05533000C4CAF /* HomeViewController.swift in Sources */,
+				DE29CF5120FB86A2000C4CAF /* RoomNormalViewController.swift in Sources */,
 				DE29CF1B20E539BA000C4CAF /* RecommendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -138,6 +138,21 @@ extension RecommendViewController: UICollectionViewDataSource {
     }
 }
 
+extension RecommendViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let group = recommendVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
+        
+        if anchor.isVertical == 0 {
+            let roomVc = RoomNormalViewController()
+            self.navigationController?.pushViewController(roomVc, animated: true)
+        } else {
+            let showVc = RoomShowViewController()
+            present(showVc, animated: true)
+        }
+    }
+}
+
 extension RecommendViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
