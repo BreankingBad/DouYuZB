@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     private lazy var pageTitleView: PageTitleView = { [weak self] in
         
@@ -61,11 +61,11 @@ extension HomeViewController {
     }
     
     private func setupPageContentView() {
-        self.view.addSubview(pageContentView)
+        self.contentView.addSubview(pageContentView)
     }
     
     private func setupPageTitleView() {
-        self.view.addSubview(pageTitleView)
+        self.contentView.addSubview(pageTitleView)
     }
     
     private func setupNavigationBar() {

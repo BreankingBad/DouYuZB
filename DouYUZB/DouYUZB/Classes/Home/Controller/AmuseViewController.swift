@@ -23,7 +23,7 @@ private let normalCellId = "normalCellId"
 private let headerId = "headerId"
 
 // 娱乐界面
-class AmuseViewController: UIViewController {
+class AmuseViewController: BaseViewController {
     
     // viewModel类
     private lazy var amuseViewModel: AmuseViewModel = AmuseViewModel()
@@ -62,6 +62,7 @@ class AmuseViewController: UIViewController {
 
         setupUI()
         
+        showPageLoading()
         // 加载网络数据
         loadData()
     }
@@ -69,7 +70,7 @@ class AmuseViewController: UIViewController {
 
 extension AmuseViewController {
     func setupUI() {
-        self.view.addSubview(collectionView)
+        self.contentView.addSubview(collectionView)
         
         collectionView.contentInset = UIEdgeInsets(top: menuViewHeight, left: 0, bottom: 0, right: 0)
         collectionView.addSubview(menuView)
@@ -120,6 +121,8 @@ extension AmuseViewController {
             var groups = self.amuseViewModel.anchorGroups
 //            groups.removeFirst()
             self.menuView.anchorGroups = groups
+            
+            self.hidePageLoading()
         }
     }
 }

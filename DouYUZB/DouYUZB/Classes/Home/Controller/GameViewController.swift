@@ -16,7 +16,7 @@ fileprivate let gameViewHeight: CGFloat = 90
 fileprivate let cellId = "gameCellId"
 fileprivate let headerId = "gameHeaderId"
 
-class GameViewController: UIViewController {
+class GameViewController: BaseViewController {
     
     fileprivate lazy var viewModel: GameViewModel = GameViewModel()
     
@@ -70,13 +70,15 @@ class GameViewController: UIViewController {
 
         setupUI()
         
+        showPageLoading()
+        
         loadData()
     }
 }
 
 extension GameViewController {
     func setupUI() {
-        self.view.addSubview(collectionView)
+        self.contentView.addSubview(collectionView)
         
         collectionView.addSubview(topHeaderView)
         collectionView.addSubview(gameView)
@@ -88,6 +90,8 @@ extension GameViewController {
             
             // 取前10个元素
             self.gameView.anchorGroups = Array(self.viewModel.gameModels[0..<10])
+            
+            self.hidePageLoading()
         }
     }
 }

@@ -50,6 +50,7 @@
 		DE29CF4520F9DB94000C4CAF /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF4420F9DB94000C4CAF /* AmuseMenuView.xib */; };
 		DE29CF4820F9EF6C000C4CAF /* AmuseMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF4620F9EF6C000C4CAF /* AmuseMenuCell.swift */; };
 		DE29CF4920F9EF6C000C4CAF /* AmuseMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE29CF4720F9EF6C000C4CAF /* AmuseMenuCell.xib */; };
+		DE29CF4B20FB345A000C4CAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29CF4A20FB345A000C4CAF /* BaseViewController.swift */; };
 		DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */; };
 		DEC0483420B1C7870011FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483220B1C7870011FDF1 /* Main.storyboard */; };
 		DEC0483620B1C7870011FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC0483520B1C7870011FDF1 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		DE29CF4420F9DB94000C4CAF /* AmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		DE29CF4620F9EF6C000C4CAF /* AmuseMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseMenuCell.swift; sourceTree = "<group>"; };
 		DE29CF4720F9EF6C000C4CAF /* AmuseMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuCell.xib; sourceTree = "<group>"; };
+		DE29CF4A20FB345A000C4CAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DEC0482B20B1C7870011FDF1 /* DouYUZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYUZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC0482E20B1C7870011FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC0483320B1C7870011FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				DEC0483220B1C7870011FDF1 /* Main.storyboard */,
 				DE29CEE420C03BBF000C4CAF /* MainViewController.swift */,
+				DE29CF4A20FB345A000C4CAF /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				DEC0482F20B1C7870011FDF1 /* AppDelegate.swift in Sources */,
 				DE29CF4120F3BAAE000C4CAF /* AmuseViewModel.swift in Sources */,
 				DE29CF4320F9DB7B000C4CAF /* AmuseMenuView.swift in Sources */,
+				DE29CF4B20FB345A000C4CAF /* BaseViewController.swift in Sources */,
 				DE29CF4820F9EF6C000C4CAF /* AmuseMenuCell.swift in Sources */,
 				DE29CF1D20E72CF2000C4CAF /* AnchorModel.swift in Sources */,
 				DE29CF1520DFDDC3000C4CAF /* HomeCollectionViewPrettyCell.swift in Sources */,

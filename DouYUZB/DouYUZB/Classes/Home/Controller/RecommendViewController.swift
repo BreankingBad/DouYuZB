@@ -29,7 +29,7 @@ private let prettyCellId = "prettyCellId"
 private let headerId = "headerId"
 
 
-class RecommendViewController: UIViewController {
+class RecommendViewController: BaseViewController {
     
     // viewModel类
     private lazy var recommendVM: RecommendViewModel = RecommendViewModel()
@@ -76,6 +76,7 @@ class RecommendViewController: UIViewController {
 
         setupUI()
         
+        showPageLoading()
         // 加载网络数据
         loadData()
     }
@@ -84,7 +85,7 @@ class RecommendViewController: UIViewController {
 
 extension RecommendViewController {
     func setupUI() {
-        self.view.addSubview(collectionView)
+        self.contentView.addSubview(collectionView)
         
         collectionView.addSubview(cycleView)
         
@@ -163,6 +164,9 @@ extension RecommendViewController {
             
             // 取前10个元素
             self.gameView.anchorGroups = models
+            
+            
+            self.hidePageLoading()
         }
         
         recommendVM.loadCycleData {
